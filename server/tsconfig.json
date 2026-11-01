@@ -1,13 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
+   "target": "ES2022",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
+    // rootDir is for the source files, outDir is for the compiled files
+    "rootDir": ".",
+    "outDir": "./dist",
+    // esmoduleInterop for default imports from CommonJS modules
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    // enable strict type-checking options
     "strict": true,
-    "skipLibCheck": true,
-    "outDir": "./dist"
+    //skipLibCheck to skip type checking of declaration files, which can speed up compilation
+    "skipLibCheck": true
   },
+  // include all TypeScript files in the src and tests directories
   "include": ["src/**/*", "tests/**/*"]
 }
